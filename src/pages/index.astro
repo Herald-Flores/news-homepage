@@ -1,11 +1,26 @@
 ---
+import CardFeature from '../components/CardFeature/CardFeature.astro'
+import Sidebar from '../components/SideBar/SideBar.astro'
 import Layout from '../layouts/Layout.astro'
 ---
 
-<Layout title='Welcome to Astro.'>
-	<main class='bg-black'>
-		<h1 class='text-3xl font-bold underline'>
-      Welcome to <span class='text-gradient'>Astro</span>
-		</h1>
-	</main>
+<Layout title='News Blog - Frontend Mentor'>
+	<div class="grid grid-cols-1 lg:grid-cols-10 gap-4 lg:gap-6">
+		<div class="col-span-1 lg:col-span-7 row-span-5">
+			<CardFeature
+				href="#"
+				textButton='Read More'
+				title="The Bright Future of Web 3.0?"
+				body="We dive into the next evolution of the web that claims to put the power of tthe platforms back into the hands of the people. But is it really fulfiling its promise?"
+				imageXL="/img/image-web-3-desktop.jpg"
+				imageXS="/img/image-web-3-mobile.jpg"
+			/>
+		</div>
+
+		<Sidebar />
+
+		<div class="col-span-1 lg:col-span-10 row-span-2 row-start-6">
+
+		</div>
+	</div>
 </Layout>

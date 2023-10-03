@@ -1,0 +1,38 @@
+---
+import Card from './Components/Card.astro'
+const data = [
+	{
+		id: 1,
+		title: 'Hydrogen VS Electric cars',
+		body: 'Will hydrogem-fueled cars ever catch up to EVs?'
+	},
+	{
+		id: 2,
+		title: 'The Downsides of AI Artistry',
+		body: 'What are the possible adverse effects of on-demand AI image generation?'
+	},
+	{
+		id: 3,
+		title: 'Is VC Funding Drying Up?',
+		body: 'Private funding by VC firms is dowwn 50% YOY. We take a look at what that means.'
+	}
+]
+
+---
+
+<aside class="box-border col-span-1 px-4 lg:px-0 lg:col-span-3 lg:row-span-5 lg:col-start-8">
+	<div class="bg-neutral-dark dark:bg-neutral-white p-4">
+		<h2 class="text-primary font-bold text-4xl mb-4">New</h2>
+		<ul class="m-0 p-0 flex flex-col gap-6 divide-y">
+			{
+				data.map(card => (
+					<Card
+						id={card.id}
+						title={card.title}
+						body={card.body}
+					/>
+				))
+			}
+		</ul>
+	</div>
+</aside>
