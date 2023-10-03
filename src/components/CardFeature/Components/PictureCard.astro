@@ -1,0 +1,16 @@
+
+---
+interface Props {
+  title: string;
+  imageXL: string;
+  imageXS: string;
+}
+
+const { title, imageXL, imageXS } = Astro.props;
+---
+
+<picture class="card__picture w-full max-h-96 overflow-hidden object-cover">
+	<source media="(min-width: 768px)" srcset={`${imageXL}`}>
+	<source media="(max-width: 767px)" srcset={`${imageXS}`}>
+	<img src={`${imageXL}`} alt={`Image feature ${title}`}>
+</picture>

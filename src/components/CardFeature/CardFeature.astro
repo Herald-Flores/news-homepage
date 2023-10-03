@@ -1,0 +1,40 @@
+---
+import PictureCard from './components/PictureCard.astro'
+
+interface Props {
+  title: string;
+  textButton: string;
+  body: string;
+  href: string;
+  imageXL: string;
+  imageXS: string;
+}
+
+const { href, textButton, title, body, imageXL, imageXS } = Astro.props;
+---
+
+<article class="card font-sans px-4 lg:px-3">
+	<PictureCard
+		title="The Bright Future of Web 3.0?"
+		imageXL={imageXL}
+		imageXS={imageXS}
+	/>
+	
+	<div class="card__body flex flex-col lg:grid lg:grid-cols-9 lg:justify-between gap-4 pt-4">
+		<div class="col-span-5 lg:pr-16">
+			<h1 class="font-bold text-neutral-dark dark:text-neutral-white text-5xl lg:text-6xl leading-1 tracking-tight">
+				{title}
+			</h1>
+		</div>
+
+		<div class="col-span-4 flex flex-col gap-5">
+			<p class="text-base text-neutral-dark-grayish dark:text-neutral-grayish leading-7 mb-1">
+				{body}
+			</p>
+			<a href={href} class="text-base uppercase max-w-fit px-6 py-2.5 bg-secondary hover:bg-neutral-dark active:bg-neutral-dark focus:bg-neutral-dark focus:outline-none font-sans font-normal text-white transition-all duration-700">
+				{textButton}
+			</a>
+		</div>
+	</div>
+</article>
+
