@@ -7,8 +7,9 @@ import Logo from './Componets/Logo.astro'
 <header class="box-border bg-white dark:bg-neutral-dark py-2 lg:py-3 relative">
 	<nav class="box-border max-w-screen-xl mx-auto px-3 lg:px-1">
 		<div class="flex flex-wrap items-center justify-between mx-auto py-4">
-			<a href="/" class="flex items-center text-[#00001A] dark:text-neutral-grayish pl-1">
-				<Logo class="sr-only" />
+			<a href="/" aria-label="Go Home News" class="flex items-center text-[#00001A] dark:text-neutral-grayish pl-1">
+				<span class="sr-only">Go to Home</span>
+				<Logo />
 			</a>
 
 			<button id="menuButton" aria-label="Toggle Mobile Menu" class="bg-transparent z-50 border-0 cursor-pointer transition ease-in-out delay-150 duration-300 lg:hidden relative block right-0 w-10 text-black dark:text-neutral-white">
