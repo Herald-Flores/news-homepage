@@ -1,0 +1,69 @@
+---
+import CloseIcon from './Componets/CloseIcon.astro'
+import HamburgerIcon from './Componets/HamburgerIcon.astro'
+import Logo from './Componets/Logo.astro'
+---
+
+<header class="box-border bg-white dark:bg-neutral-dark py-2 lg:py-3 relative">
+	<nav class="box-border max-w-screen-xl mx-auto px-3 lg:px-1">
+		<div class="flex flex-wrap items-center justify-between mx-auto py-4">
+			<a href="./" class="flex items-center text-[#00001A] dark:text-neutral-grayish pl-1">
+				<Logo />
+			</a>
+
+			<button id="menuButton" class="bg-transparent z-50 border-0 cursor-pointer transition ease-in-out delay-150 duration-300 lg:hidden relative block right-0 w-10 text-black dark:text-neutral-white">
+				<HamburgerIcon />
+				<CloseIcon />
+			</button>
+
+			<div class="primary-navigation transition-opacity duration-1000 bg-black bg-opacity-60 h-screen hidden absolute lg:relative w-full lg:w-max top-0 left-auto right-0 lg:bg-transparent lg:flex items-center justify-end lg:h-fit lg:order-2 z-20">
+				<div class="menu w-2/3 lg:w-max h-full bg-white dark:bg-neutral-dark z-20">
+					<ul class="flex flex-col lg:flex-row justify-center box-border h-2/3 px-10 lg:px-0 gap-5 lg:gap-12">
+						<li class="">
+							<a class="text-neutral-dark text-xl lg:text-lg lg:text-neutral-dark-grayish dark:text-neutral-grayish dark:hover:text-secondary hover:text-secondary font-sans font-semibold" href="#">
+								Home
+							</a>
+						</li>
+						<li class="">
+							<a class="text-neutral-dark text-xl lg:text-lg lg:text-neutral-dark-grayish dark:text-neutral-grayish dark:hover:text-secondary hover:text-secondary font-sans font-semibold" href="#">
+								New
+							</a>
+						</li>
+						<li class="">
+							<a class="text-neutral-dark text-xl lg:text-lg lg:text-neutral-dark-grayish dark:text-neutral-grayish dark:hover:text-secondary hover:text-secondary font-sans font-semibold" href="#">
+								Popular
+							</a>
+						</li>
+						<li class="">
+							<a class="text-neutral-dark text-xl lg:text-lg lg:text-neutral-dark-grayish dark:text-neutral-grayish dark:hover:text-secondary hover:text-secondary font-sans font-semibold" href="#">
+								Trending
+							</a>
+						</li>
+						<li class="">
+							<a class="text-neutral-dark text-xl lg:text-lg lg:text-neutral-dark-grayish dark:text-neutral-grayish dark:hover:text-secondary hover:text-secondary font-sans font-semibold" href="#">
+								Categories
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<script>
+function handleClick () {
+	const closeIcon = document.querySelector('#closeIcon')
+	const menuIcon = document.querySelector('#menuIcon')
+	const primaryMenu = document.querySelector('.primary-navigation')
+
+	closeIcon.classList.toggle('hidden')
+	menuIcon.classList.toggle('hidden')
+	primaryMenu.classList.toggle('hidden')
+	primaryMenu.classList.toggle('flex')
+
+	document.body.classList.toggle('h-screen')
+	document.body.classList.toggle('overflow-hidden')
+}
+document.getElementById('menuButton').addEventListener('click', handleClick)
+</script>
