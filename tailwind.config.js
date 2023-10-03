@@ -66,7 +66,7 @@ export default {
 				sm: '480px',
 				md: '768px',
 				lg: '976px',
-				xl: '1240px',
+				xl: '1200px',
 				'2xl': '1440px'
 			},
 			opacity: {

@@ -11,8 +11,8 @@ const { title, image, body, number } = Astro.props;
 
 <article>
 	<a href="#" class="flex items-center bg-neutral-white flex-row max-w-xl dark:border-gray-700 dark:bg-neutral-dark">
-		<img src={image} alt={title} class="object-cover w-28 h-36 lg:h-36 lg:w-32">
-		<div class="flex flex-col justify-between pl-3 md:pl-6 py-0 leading-normal">
+		<img src={image} alt={title} class="object-cover w-28 h-36 lg:h-36 lg:w-28">
+		<div class="flex flex-col justify-between pl-3 md:pl-5 py-0 leading-normal">
 				<span class="text-4xl font-sans font-bold text-neutral-grayish mb-4">{number}</span>
 				<h4 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white hover:text-secondary dark:hover:text-secondary transition-all duration-500">
 					{title}
