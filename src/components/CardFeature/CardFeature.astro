@@ -30,7 +30,7 @@ import PictureCard from './Components/PictureCard.astro'
 			<p class="text-base text-neutral-dark-grayish dark:text-neutral-grayish leading-7 mb-1">
 				{body}
 			</p>
-			<a href={href} class="text-base uppercase max-w-max px-6 py-2.5 bg-secondary hover:bg-neutral-dark active:bg-neutral-dark focus:bg-neutral-dark focus:outline-none font-sans font-normal text-white transition-all duration-700">
+			<a href={href} aria-label={`Read more abot ${title}`} class="text-base uppercase max-w-max px-6 py-2.5 bg-secondary hover:bg-neutral-dark active:bg-neutral-dark focus:bg-neutral-dark focus:outline-none font-sans font-normal text-white transition-all duration-700">
 				{textButton}
 			</a>
 		</div>
