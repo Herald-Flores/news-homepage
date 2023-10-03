@@ -1,0 +1,36 @@
+---
+import PostCard from './Components/PostCard.astro'
+const data = [
+	{
+		number: '01',
+		title: 'Reviving Retro PCs',
+		body: 'What happens when old PCs are given modern upgrades?',
+		image: '/img/image-retro-pcs.jpg'
+	},
+	{
+		number: '02',
+		title: 'Top 10 Laptops of 2022',
+		body: 'Our best picks for various needs and budgets.',
+		image: '/img/image-top-laptops.jpg'
+	},
+	{
+		number: '03',
+		title: 'The Growth of Gaming',
+		body: 'How the pandemic has sparked fresh opportunities.',
+		image: '/img/image-gaming-growth.jpg'
+	}
+]
+---
+
+<div class="col-span-1 order-3 px-4 lg:col-span-10 lg:row-span-2 lg:row-start-6 grid grid-cols-1 md:grid-cols-3 gap-7 dark:bg-neutral-dark my-8 pt-4">
+	{
+		data.map(card => (
+			<PostCard
+				number={card.number}
+				title={card.title}
+				body={card.body}
+				image={card.image}
+			/>
+		))
+	}
+</div>
