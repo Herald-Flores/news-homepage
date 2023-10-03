@@ -7,13 +7,13 @@ import Logo from './Componets/Logo.astro'
 <header class="box-border bg-white dark:bg-neutral-dark py-2 lg:py-3 relative">
 	<nav class="box-border max-w-screen-xl mx-auto px-3 lg:px-1">
 		<div class="flex flex-wrap items-center justify-between mx-auto py-4">
-			<a href="./" class="flex items-center text-[#00001A] dark:text-neutral-grayish pl-1">
-				<Logo />
+			<a href="/" class="flex items-center text-[#00001A] dark:text-neutral-grayish pl-1">
+				<Logo class="sr-only" />
 			</a>
 
-			<button id="menuButton" aria-hidden="true" class="bg-transparent z-50 border-0 cursor-pointer transition ease-in-out delay-150 duration-300 lg:hidden relative block right-0 w-10 text-black dark:text-neutral-white">
-				<HamburgerIcon />
-				<CloseIcon />
+			<button id="menuButton" aria-label="Toggle Mobile Menu" class="bg-transparent z-50 border-0 cursor-pointer transition ease-in-out delay-150 duration-300 lg:hidden relative block right-0 w-10 text-black dark:text-neutral-white">
+				<HamburgerIcon aria-hidden="true" alt="Hamburger Icon" />
+				<CloseIcon aria-hidden="true" alt="Close Icon" />
 			</button>
 
 			<div class="primary-navigation transition-opacity duration-1000 bg-black bg-opacity-60 h-screen hidden absolute lg:relative w-full lg:w-max top-0 left-auto right-0 lg:bg-transparent lg:flex items-center justify-end lg:h-fit lg:order-2 z-20">
