@@ -1,12 +1,13 @@
 ---
 import CardFeature from '../components/CardFeature/CardFeature.astro'
+import PostList from '../components/PostList/PostList.astro'
 import Sidebar from '../components/SideBar/SideBar.astro'
 import Layout from '../layouts/Layout.astro'
 ---
 
-<Layout title='News Blog - Frontend Mentor'>
+<Layout title='Frontend Mentor | News homepage'>
 	<div class="grid grid-cols-1 lg:grid-cols-10 gap-4 lg:gap-6">
-		<div class="col-span-1 lg:col-span-7 row-span-5">
+		<div class="col-span-1 lg:col-span-7 lg:row-span-5 mb-4 lg:mb-0">
 			<CardFeature
 				href="#"
 				textButton='Read More'
@@ -19,8 +20,6 @@ import Layout from '../layouts/Layout.astro'
 
 		<Sidebar />
 
-		<div class="col-span-1 lg:col-span-10 row-span-2 row-start-6">
-
-		</div>
+		<PostList />
 	</div>
 </Layout>
