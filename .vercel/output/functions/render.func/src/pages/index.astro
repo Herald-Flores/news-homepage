@@ -6,8 +6,7 @@ import Layout from '../layouts/Layout.astro'
 // data imports
 import posts from '../data/posts.json'
 
-const homePosts = posts.slice(0, 3)
-
+export const prerender = false
 ---
 
 <Layout title='Frontend Mentor | News homepage' description='News homepage for Frontend Mentor challenge'>
@@ -20,12 +19,11 @@ const homePosts = posts.slice(0, 3)
 				body="We dive into the next evolution of the web that claims to put the power of tthe platforms back into the hands of the people. But is it really fulfiling its promise?"
 				imageXL="/img/image-web-3-desktop.jpg"
 				imageXS="/img/image-web-3-mobile.jpg"
-				transition:name="hero"
 			/>
 		</div>
 
 		<Sidebar />
 
-		<PostList posts={homePosts} />
+		<PostList posts={posts} />
 	</div>
 </Layout>

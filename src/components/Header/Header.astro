@@ -4,7 +4,7 @@ import HamburgerIcon from './Componets/HamburgerIcon.astro'
 import Logo from './Componets/Logo.astro'
 ---
 
-<header class="box-border bg-white dark:bg-neutral-dark py-2 lg:py-3 relative mb-2">
+<header class="box-border py-2 lg:py-3 relative mb-2">
 	<nav class="box-border max-w-screen-xl mx-auto px-3 lg:px-1">
 		<div class="flex flex-wrap items-center justify-between mx-auto py-4">
 			<a href="/" aria-label="Go Home News" class="flex items-center text-[#00001A] dark:text-neutral-grayish pl-1">
@@ -18,10 +18,10 @@ import Logo from './Componets/Logo.astro'
 			</button>
 
 			<div class="primary-navigation transition-opacity duration-1000 bg-black bg-opacity-60 h-screen hidden absolute lg:relative w-full lg:w-max top-0 left-auto right-0 lg:bg-transparent lg:flex items-center justify-end lg:h-fit lg:order-2 z-20">
-				<div class="menu w-2/3 lg:w-max h-full bg-white dark:bg-neutral-dark z-20">
-					<ul class="flex flex-col lg:flex-row justify-center box-border h-2/3 px-10 lg:px-0 gap-5 lg:gap-8">
+				<div class="menu w-2/3 lg:w-max h-full z-20">
+					<ul id="primaryMenu" class="flex flex-col lg:flex-row justify-center box-border h-2/3 px-10 lg:px-0 gap-5 lg:gap-8">
 						<li class="">
-							<a class="text-neutral-dark text-xl lg:text-lg lg:text-neutral-dark-grayish dark:text-neutral-grayish dark:hover:text-secondary hover:text-secondary font-sans font-normal" href="#">
+							<a class="text-neutral-dark text-xl lg:text-lg lg:text-neutral-dark-grayish dark:text-neutral-grayish dark:hover:text-secondary hover:text-secondary font-sans font-normal" href="/">
 								Home
 							</a>
 						</li>
@@ -41,7 +41,7 @@ import Logo from './Componets/Logo.astro'
 							</a>
 						</li>
 						<li class="">
-							<a class="text-neutral-dark text-xl lg:text-lg lg:text-neutral-dark-grayish dark:text-neutral-grayish dark:hover:text-secondary hover:text-secondary font-sans font-normal" href="#">
+							<a class="text-neutral-dark text-xl lg:text-lg lg:text-neutral-dark-grayish dark:text-neutral-grayish dark:hover:text-secondary hover:text-secondary font-sans font-normal" href="/blog/category">
 								Categories
 							</a>
 						</li>

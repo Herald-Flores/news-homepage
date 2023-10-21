@@ -1,0 +1,68 @@
+[
+	{
+		"id":"1",
+		"number": "01",
+		"title":"Reviving Retro PCs",
+		"excerpt":"What happens when old PCs are given modern upgrades?",
+		"content":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+		"image":"/img/image-retro-pcs.jpg",
+		"published":true,
+		"date":"2023-01-01",
+		"category":"Retro"
+	},
+	{
+		"id":"2",
+		"number": "02",
+		"title":"Top 10 Laptops of 2022",
+		"excerpt":"Our best picks for various needs and budgets.",
+		"content":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+		"image":"/img/image-top-laptops.jpg",
+		"published":true,
+		"date":"2023-01-01",
+		"category":"Laptops"
+	},
+	{
+		"id":"3",
+		"number": "03",
+		"title":"The Growth of Gaming",
+		"excerpt":"How the pandemic has sparked fresh opportunities.",
+		"content":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+		"image":"/img/image-gaming-growth.jpg",
+		"published":true,
+		"date":"2023-01-01",
+		"category":"Gaming"
+	},
+	{
+		"id":"4",
+		"number": "04",
+		"title":"The Growth of Gaming Platforms",
+		"excerpt":"How the pandemic has sparked fresh opportunities.",
+		"content":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+		"image":"/img/image-gaming-growth.jpg",
+		"published":true,
+		"date":"2023-01-01",
+		"category":"Gaming"
+	},
+	{
+		"id":"5",
+		"number": "05",
+		"title":"Gaming Platforms ",
+		"excerpt":"How the pandemic has sparked fresh opportunities.",
+		"content":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+		"image":"/img/image-gaming-growth.jpg",
+		"published":true,
+		"date":"2023-01-01",
+		"category":"Gaming"
+	},
+	{
+		"id":"6",
+		"number": "06",
+		"title":"New Gaming Platforms",
+		"excerpt":"How the pandemic has sparked fresh opportunities.",
+		"content":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+		"image":"/img/ai-space.png",
+		"published":true,
+		"date":"2023-01-01",
+		"category":"Gaming"
+	}
+]

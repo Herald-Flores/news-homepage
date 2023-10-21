@@ -1,0 +1,19 @@
+---
+import Card from './components/Card.astro'
+
+const { categories } = Astro.props
+
+---
+
+<div class="col-span-1 order-3 px-4 lg:px-3 mx-auto lg:col-span-10 lg:row-span-2 lg:row-start-6 grid grid-cols-1 gap-6 lg:gap-10">
+	{
+		categories.slice(1).map(card => (
+			<Card
+				title={card.title}
+				body={card.body}
+				image={card.image}
+				slug={card.slug}
+			/>
+		))
+	}
+</div>

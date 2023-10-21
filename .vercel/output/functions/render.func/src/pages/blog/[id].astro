@@ -1,0 +1,28 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import { getPosts } from '../../services/getdata'
+
+export const prerender = false
+
+	// export function getStaticPaths () {
+	// 	const posts = getPosts()
+
+	// 	return posts.map(post => ({
+	// 		params: {
+	// 			id: post.id
+	// 		}
+	// 	}))
+	// }
+
+---
+
+<Layout title={'Frontend Mentor | '} >
+	<div class="grid grid-cols-1 lg:grid-cols-10 gap-4 lg:gap-4">
+		<div class="col-span-1">
+			<h2>titulo</h2>
+		</div>
+		<div class="col-span-10">
+			<slot />
+		</div>
+	</div>
+</Layout>

@@ -1,0 +1,20 @@
+[
+	{
+		"title":"Retro",
+		"slug":"retro",
+		"body":"We dive into the next evolution of the web that claims to put the power of tthe platforms back into the hands of the people.",
+		"image":"/img/ai-space.png"
+	},
+	{
+		"title":"Laptops",
+		"slug":"laptops",
+		"body":"We dive into the next evolution of the web that claims to put the power of tthe platforms back into the hands of the people. But is it really fulfiling its promise?",
+		"image":"/img/image-web-3-desktop.jpg"
+	},
+	{
+		"title":"Gaming",
+		"slug":"gaming",
+		"body":"We dive into the next evolution of the web that claims to put the power of tthe platforms back into the hands of the people. But is it really fulfiling its promise?",
+		"image":"/img/image-web-3-desktop.jpg"
+	}
+]

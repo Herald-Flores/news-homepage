@@ -1,0 +1,44 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import posts from '../../data/posts.json'
+import { fade } from 'astro:transitions'
+
+
+const { id } = Astro.params
+
+const info = posts.find(b => b.id === id)
+
+if (!info) {
+  return Astro.redirect("/404")
+}
+---
+
+<Layout title={`Frontend Mentor | ${info.title}`}>
+	<main id="main" class="relative z-10 flex flex-1 flex-col dark:text-neutral-white">
+		<div class="mx-auto w-full max-w-screen-sm overflow-hidden md:-mb-10 lg:-mb-12 xl:-mb-16" transition:name=`hero-post-${id}` transition:animate={fade({ duration: '0.4s' })}>
+			<img src={info.image} class="w-full max-h-[300px] object-cover" loading="lazy" decoding="async" alt={info.title} class="w-full">
+		</div>
+		<div class="grid-container relative mx-auto max-w-screen-lg md:z-10">
+			<div class="mx-auto w-fit max-w-fullpy-5 sm:py-8 md:px-10 md:py-12 lg:p-12 lg:py-16 xl:p-16 xl:py-20">
+				<header class="mx-auto w-full text-center">
+					<time class="code" datetime="2023-10-12T00:00:00.000Z">
+						{
+							new Date(info.date).toLocaleDateString(
+								'en-us', {
+									year: 'numeric',
+									month: 'long',
+									day: 'numeric'
+								})
+						}
+					</time>
+					<h1 class="heading-3 mb-4 mt-2 md:heading-2 sm:mb-5 sm:mt-3">{info.title}</h1>
+			</header>
+			<hr class="-mx-16 my-16 border-astro-gray-500">
+			<article class="prose">
+				<p class="text-base ">
+					{info.content}
+				</p>
+			</article>
+		</div>
+	</main>
+</Layout>
