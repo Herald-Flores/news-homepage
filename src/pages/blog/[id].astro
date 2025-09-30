@@ -1,12 +1,18 @@
 ---
-import Layout from '../../layouts/Layout.astro'
-import posts from '../../data/posts.json'
+import Layout from '@/layouts/Layout.astro'
+import posts from '@/data/posts.json'
 import { fade } from 'astro:transitions'
 
 
 const { id } = Astro.params
 
-const info = posts.find(b => b.id === id)
+export async function getStaticPaths() {
+  return posts.map(post => ({
+    params: { id: post.id.toString() } 
+  }))
+}
+
+const info = posts.find(b => b.id.toString() === id)
 
 if (!info) {
   return Astro.redirect("/404")

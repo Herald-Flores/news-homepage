@@ -22,8 +22,8 @@
     "astro": "5.14.1"
   },
   "devDependencies": {
-    "@astrojs/tailwind": "6.0.2",
-    "@astrojs/vercel": "8.2.8",
+    "@astrojs/tailwind": "^6.0.2",
+    "@astrojs/vercel": "^8.2.8",
     "eslint": "9.36.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-config-standard": "17.1.0",

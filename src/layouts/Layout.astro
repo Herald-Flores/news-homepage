@@ -1,63 +1,65 @@
 ---
 interface Props {
-  title?: string,
-	description?: string
+  title?: string
+  description?: string
 }
 
 const { title, description } = Astro.props
-import Footer from '../components/Footer/Footer.astro';
-import Header from '../components/Header/Header.astro';
-import { ViewTransitions, fade, slide } from "astro:transitions";
+import Footer from '@/components/Footer/Footer.astro'
+import Header from '@/components/Header/Header.astro'
 ---
 
 <!doctype html>
-<html lang='en' transition:animate="none">
+<html lang="en" transition:animate="none">
   <head>
-    <meta charset='UTF-8' />
-    <meta name='description' content='Astro description' />
-    <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/svg+xml' href='/img/favicon-32x32.png' />
-    <meta name='generator' content={Astro.generator} />
-		<meta name="view-transition" content="same-origin" />
+    <meta charset="UTF-8" />
+    <meta name="description" content={description || 'Astro description'} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/img/favicon-32x32.png" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="view-transition" content="same-origin" />
     <title>{title}</title>
-		<meta name='description' content={description} />
-		<ViewTransitions />
   </head>
+
   <body class="dark:bg-neutral-dark transition-all duration-500">
-		<Header transition:persist/>
-		<main class='box-border max-w-screen-xl mx-auto mt-2' transition:animate={fade({ duration: '0.5s' })}>
-			<slot />
-		</main>
+    <Header transition:persist />
 
-		<Footer transition:persist/>
+    <main
+      class="box-border max-w-screen-xl mx-auto mt-2"
+      transition:animate="fade"
+    >
+      <slot />
+    </main>
 
-		<script>
-			const themeToggles = document.querySelectorAll('[data-theme-toggle]')
-			const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon')
-			const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon')
+    <Footer transition:persist />
 
-			const getTheme = () => localStorage.getItem('color-theme') || 'light'
+    <script>
+      const themeToggles = document.querySelectorAll('[data-theme-toggle]')
+      const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon')
+      const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon')
 
-			const setTheme = (theme) => {
+			const getTheme = (): Theme => {
+				const theme = localStorage.getItem('color-theme')
+				return theme === 'dark' ? 'dark' : 'light'
+			}
+      type Theme = 'light' | 'dark'
+
+			const setTheme = (theme: Theme): void => {
 				document.documentElement.setAttribute('data-theme', theme)
+
 				if (theme === 'dark') {
 					document.documentElement.classList.add('dark')
-				}	else {
+				} else {
 					document.documentElement.classList.remove('dark')
 				}
 			}
-			
 
-			window.addEventListener('DOMContentLoaded', () => {
-				setTheme(getTheme())
-				toggleIconBTN(getTheme())
-			})
-			document.addEventListener('astro:after-swap', () => {
-				setTheme(getTheme())
-				toggleIconBTN(getTheme())
-			})
+			const toggleIconBTN = (theme: Theme): void => {
+				const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon') as HTMLElement | null
+				const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon') as HTMLElement | null
 
-			const toggleIconBTN = (theme) => {
+				if (!themeToggleDarkIcon || !themeToggleLightIcon) return
+
 				if (theme === 'dark') {
 					themeToggleLightIcon.classList.remove('hidden')
 					themeToggleDarkIcon.classList.add('hidden')
@@ -67,16 +69,26 @@ import { ViewTransitions, fade, slide } from "astro:transitions";
 				}
 			}
 
-			themeToggles.forEach((toggle) => {
-				toggle.addEventListener('click', () => {
-					const nextTheme = getTheme() === 'light' ? 'dark' : 'light'
-					toggleIconBTN(nextTheme)
+      window.addEventListener('DOMContentLoaded', () => {
+				const theme: Theme = getTheme()
+        setTheme(theme)
+				toggleIconBTN(theme)
+      })
 
-					localStorage.setItem('color-theme', nextTheme)
-					setTheme(nextTheme)
-				})
-			})
-		</script>
+      document.addEventListener('astro:after-swap', () => {
+				const theme: Theme = getTheme()
+        setTheme(theme)
+        toggleIconBTN(theme)
+      })
+
+      themeToggles.forEach((toggle) => {
+        toggle.addEventListener('click', () => {
+          const nextTheme = getTheme() === 'light' ? 'dark' : 'light'
+          toggleIconBTN(nextTheme)
+          localStorage.setItem('color-theme', nextTheme)
+          setTheme(nextTheme)
+        })
+      })
+    </script>
   </body>
 </html>
-

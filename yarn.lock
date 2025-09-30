@@ -51,7 +51,7 @@
   dependencies:
     prismjs "^1.30.0"
 
-"@astrojs/tailwind@6.0.2":
+"@astrojs/tailwind@^6.0.2":
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/@astrojs/tailwind/-/tailwind-6.0.2.tgz#ecba42afff5e52656229bffe3547a7667a1dd64f"
   integrity sha512-j3mhLNeugZq6A8dMNXVarUa8K6X9AW+QHU9u3lKNrPLMHhOQ0S7VeWhHwEeJFpEK1BTKEUY1U78VQv2gN6hNGg==
@@ -73,7 +73,7 @@
     is-wsl "^3.1.0"
     which-pm-runs "^1.1.0"
 
-"@astrojs/vercel@8.2.8":
+"@astrojs/vercel@^8.2.8":
   version "8.2.8"
   resolved "https://registry.yarnpkg.com/@astrojs/vercel/-/vercel-8.2.8.tgz#0fd59c3190bb32950fbe1816c1534a581ffb8b0f"
   integrity sha512-Bp5kHSoHoMHNWy0CIWNOfcSsOaU3fL31BbGGb6Hu05oeRWE+s24z5zS641DJwPndat7Wag+x1d2PNbraQeag+w==

@@ -1,4 +1,4 @@
-import posts from '../data/posts.json'
+import posts from '@/data/posts.json'
 
 export const getPostById = ({ id }) => {
 	const post = posts.find((post) => post.id === id)

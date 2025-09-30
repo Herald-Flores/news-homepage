@@ -1,40 +1,25 @@
 ---
-import Layout from '../../../layouts/Layout.astro'
-import PostList from '../../../components/PostList/PostList.astro'
-import posts from '../../../data/posts.json'
-import categories from '../../../data/categories.json'
+import Layout from '@/layouts/Layout.astro'
+import PostList from '@/components/PostList/PostList.astro'
+import posts from '@/data/posts.json'
+import categories from '@/data/categories.json'
 import { fade } from "astro:transitions";
-
-// export async function getStaticPaths () {
-// 	return [
-// 		{
-// 			params: { category: slugify('Retro') },
-// 			props: { name: 'Retro' }
-// 		},
-// 		{
-// 			params: { category: slugify('Laptops') },
-// 			props: { name: 'Laptops' }
-// 		},
-// 		{
-// 			params: { category: slugify('Gaming') },
-// 			props: { name: 'Gaming' }
-// 		}
-// 	]
-// }
 
 const { slug } = Astro.params
 
-const info = categories.find(b => b.slug === slug)
+export async function getStaticPaths() {
+  return categories.map(category => ({
+    params: { slug: category.slug }
+  }))
+}
 
+const info = categories.find(b => b.slug === slug)
 if (!info) {
-  return Astro.redirect("/404")
+  return Astro.redirect('/404')
 }
 
 
-const catPosts = posts.filter(
-	(post) => post.category === info.title
-)
-
+const catPosts = posts.filter(post => post.category === info.title)
 const postList = catPosts.slice(2)
 ---
 
