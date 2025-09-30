@@ -2,7 +2,7 @@
 import { e as createComponent, f as createAstro, m as maybeRenderHead, h as addAttribute, l as renderTransition, n as fade, r as renderTemplate, k as renderComponent } from '../../chunks/astro/server_dK5Ngjk4.mjs';
 import 'kleur/colors';
 import 'clsx';
-import { $ as $$Layout } from '../../chunks/Layout_HsO54Wwk.mjs';
+import { $ as $$Layout } from '../../chunks/Layout_DE3SIRxb.mjs';
 /* empty css                                    */
 import { c as categories } from '../../chunks/categories_lhyT-gJ8.mjs';
 export { renderers } from '../../renderers.mjs';

@@ -2,9 +2,9 @@
 import { e as createComponent, f as createAstro, m as maybeRenderHead, h as addAttribute, r as renderTemplate, k as renderComponent, l as renderTransition } from '../chunks/astro/server_dK5Ngjk4.mjs';
 import 'kleur/colors';
 import 'clsx';
-import { $ as $$PostList } from '../chunks/PostList_Daw6NCpI.mjs';
-import { $ as $$Layout } from '../chunks/Layout_HsO54Wwk.mjs';
-import { p as posts } from '../chunks/posts_PNhgKCYD.mjs';
+import { $ as $$PostList } from '../chunks/PostList_CJdKGxR_.mjs';
+import { p as posts } from '../chunks/posts_CuP9QsWe.mjs';
+import { $ as $$Layout } from '../chunks/Layout_DE3SIRxb.mjs';
 /* empty css                                 */
 export { renderers } from '../renderers.mjs';
 
@@ -33,24 +33,8 @@ const $$Card = createComponent(($$result, $$props, $$slots) => {
 }, "/Users/herald/Development/projects/news-homepage/src/components/SideBar/Components/Card.astro", void 0);
 
 const $$SideBar = createComponent(($$result, $$props, $$slots) => {
-  const data = [
-    {
-      id: 1,
-      title: "Hydrogen VS Electric cars",
-      body: "Will hydrogem-fueled cars ever catch up to EVs?"
-    },
-    {
-      id: 2,
-      title: "The Downsides of AI Artistry",
-      body: "What are the possible adverse effects of on-demand AI image generation?"
-    },
-    {
-      id: 3,
-      title: "Is VC Funding Drying Up?",
-      body: "Private funding by VC firms is dowwn 50% YOY. We take a look at what that means."
-    }
-  ];
-  return renderTemplate`${maybeRenderHead()}<aside class="box-border col-span-1 order-2 mt-5 lg:mt-0 px-4 lg:px-0 lg:col-span-3 lg:row-span-5 lg:col-start-8"> <div class="bg-neutral-dark dark:bg-neutral-white px-5 lg:px-5 py-4 lg:py-7"> <h2 class="text-primary font-bold text-4xl mb-3 lg:mb-5">New</h2> <ul class="m-0 p-0 flex flex-col gap-6 divide-y"> ${data.map((card) => renderTemplate`${renderComponent($$result, "Card", $$Card, { "id": card.id, "title": card.title, "body": card.body })}`)} </ul> </div> </aside>`;
+  const data = posts.slice(3, 6);
+  return renderTemplate`${maybeRenderHead()}<aside class="box-border col-span-1 order-2 mt-5 lg:mt-0 px-4 lg:px-0 lg:col-span-3 lg:row-span-5 lg:col-start-8"> <div class="bg-neutral-dark dark:bg-neutral-white px-5 lg:px-5 py-4 lg:py-7"> <h2 class="text-primary font-bold text-4xl mb-3 lg:mb-5">New</h2> <ul class="m-0 p-0 flex flex-col gap-6 divide-y"> ${data.map((card) => renderTemplate`${renderComponent($$result, "Card", $$Card, { "id": card.id, "title": card.title, "body": card.excerpt })}`)} </ul> </div> </aside>`;
 }, "/Users/herald/Development/projects/news-homepage/src/components/SideBar/SideBar.astro", void 0);
 
 const $$Index = createComponent(($$result, $$props, $$slots) => {

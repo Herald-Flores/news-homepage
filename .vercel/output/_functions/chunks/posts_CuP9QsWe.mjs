@@ -35,8 +35,8 @@ const posts = [
 	{
 		id: "4",
 		number: "04",
-		title: "The Growth of Gaming Platforms",
-		excerpt: "How the pandemic has sparked fresh opportunities.",
+		title: "Hydrogen VS Electric Cars",
+		excerpt: "Will hydrogen-fueled cars ever catch up to EVs?",
 		content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
 		image: "/img/image-gaming-growth.jpg",
 		published: true,
@@ -46,8 +46,8 @@ const posts = [
 	{
 		id: "5",
 		number: "05",
-		title: "Gaming Platforms ",
-		excerpt: "How the pandemic has sparked fresh opportunities.",
+		title: "The Downsides of Al Artistry",
+		excerpt: "What are the possible adverse effects of on-demand Al image generation?",
 		content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
 		image: "/img/image-gaming-growth.jpg",
 		published: true,
@@ -57,8 +57,8 @@ const posts = [
 	{
 		id: "6",
 		number: "06",
-		title: "New Gaming Platforms",
-		excerpt: "How the pandemic has sparked fresh opportunities.",
+		title: "Is VC Funding Drying Up?",
+		excerpt: "Private funding by VC firms is down 50% YOY. We take a look at what that means.",
 		content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
 		image: "/img/ai-space.png",
 		published: true,

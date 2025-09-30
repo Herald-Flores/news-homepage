@@ -1,12 +1,24 @@
 ---
 import PostCard from './Components/PostCard.astro'
 
+type Post = {
+  id: string
+  number: string
+  title: string
+  excerpt: string
+  image: string
+}
+
+interface Props {
+  posts?: Post[]
+}
+
 const { posts } = Astro.props
 ---
 
 <div class='col-span-1 order-3 px-4 lg:px-3 mx-auto lg:col-span-10 lg:row-span-2 lg:row-start-6 grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-20 my-8 pt-4'>
 	{
-		posts.map(card => (
+		(posts ?? []).map((card: Post) => (
 			<PostCard
 				id={card.id}
 				number={card.number}

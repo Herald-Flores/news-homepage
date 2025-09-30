@@ -1,22 +1,9 @@
 ---
 import Card from './Components/Card.astro'
-const data = [
-	{
-		id: 1,
-		title: 'Hydrogen VS Electric cars',
-		body: 'Will hydrogem-fueled cars ever catch up to EVs?'
-	},
-	{
-		id: 2,
-		title: 'The Downsides of AI Artistry',
-		body: 'What are the possible adverse effects of on-demand AI image generation?'
-	},
-	{
-		id: 3,
-		title: 'Is VC Funding Drying Up?',
-		body: 'Private funding by VC firms is dowwn 50% YOY. We take a look at what that means.'
-	}
-]
+
+import posts from '@/data/posts.json'
+
+const data = posts.slice(3, 6)
 
 ---
 
@@ -29,7 +16,7 @@ const data = [
 					<Card
 						id={card.id}
 						title={card.title}
-						body={card.body}
+						body={card.excerpt}
 					/>
 				))
 			}
