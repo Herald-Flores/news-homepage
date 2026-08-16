@@ -6,12 +6,14 @@ module.exports = {
 	tabWidth: 2,
 	trailingComma: 'none',
 	useTabs: true,
+	plugins: ['prettier-plugin-astro'],
 	overrides: [
 		{
-			files: ['*.json', '*.md', '*.toml', '*.yml'],
+			files: ['*.json', '*.md', '*.toml', '*.yml', '*.astro'],
 			options: {
-				useTabs: false
-			}
+				useTabs: false,
+				parser: 'astro',
+			},
 		}
 	],
 	endOfLine: 'lf'
