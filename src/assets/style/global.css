@@ -75,6 +75,44 @@
   right: 0;
 }
 
+/* Keyframes for View Transitions (mobile: full slide) */
+@keyframes full-slide-to-left {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes full-slide-from-right {
+  from {
+    transform: translateX(100%);
+  }
+}
+
+/* Keyframes for View Transitions (desktop: fade + slide) */
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-to-left {
+  to {
+    transform: translateX(-45%);
+  }
+}
+
+@keyframes slide-from-right {
+  from {
+    transform: translateX(45%);
+  }
+}
+
 /* Transitions for mobile */
 ::view-transition-old(root) {
   animation: 500ms ease-out both full-slide-to-left;
