@@ -21,7 +21,7 @@ import Logo from './Componets/Logo.astro'
 				<div class="menu w-2/3 lg:w-max h-full z-20">
 					<ul id="primaryMenu" class="flex flex-col lg:flex-row justify-center box-border h-2/3 px-10 lg:px-0 gap-5 lg:gap-8">
 						<li class="">
-							<a class="text-white lg:text-neutral-600 text-xl lg:text-lg dark:text-neutral-grayish dark:hover:text-secondary hover:text-secondary font-sans font-normal" href="/">
+							<a class="text-white lg:text-neutral-600 text-xl lg:text-lg dark:text-neutral-grayish dark:hover:text-secondary hover:text-secondary font-sans font-normal" href="/blog/category">
 								Home
 							</a>
 						</li>
@@ -31,7 +31,7 @@ import Logo from './Componets/Logo.astro'
 							</a>
 						</li>
 						<li class="">
-							<a class="text-white lg:text-neutral-600 text-xl lg:text-lg dark:text-neutral-grayish dark:hover:text-secondary hover:text-secondary font-sans font-normal" href="blog/2">
+							<a class="text-white lg:text-neutral-600 text-xl lg:text-lg dark:text-neutral-grayish dark:hover:text-secondary hover:text-secondary font-sans font-normal" href="/blog/category/gaming">
 								Popular
 							</a>
 						</li>
@@ -54,9 +54,13 @@ import Logo from './Componets/Logo.astro'
 
 <script>
 function handleClick () {
-	const closeIcon = document.querySelector('#closeIcon')
-	const menuIcon = document.querySelector('#menuIcon')
-	const primaryMenu = document.querySelector('.primary-navigation')
+	const closeIcon = document.querySelector<HTMLElement>('#closeIcon')
+	const menuIcon = document.querySelector<HTMLElement>('#menuIcon')
+	const primaryMenu = document.querySelector<HTMLElement>('.primary-navigation')
+
+	if (!closeIcon || !menuIcon || !primaryMenu) {
+		return
+	}
 
 	closeIcon.classList.toggle('hidden')
 	menuIcon.classList.toggle('hidden')
@@ -66,5 +70,9 @@ function handleClick () {
 	document.body.classList.toggle('h-screen')
 	document.body.classList.toggle('overflow-hidden')
 }
-document.getElementById('menuButton').addEventListener('click', handleClick)
+
+const menuButton = document.getElementById('menuButton')
+if (menuButton) {
+	menuButton.addEventListener('click', handleClick)
+}
 </script>
